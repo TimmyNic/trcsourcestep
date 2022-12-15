@@ -3,7 +3,7 @@ import io
 import os
 import re
 
-from setuptools import setup, find_packages
+from setuptools import setup, find_namespace_packages
 
 SETUP_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -52,8 +52,8 @@ setup(
     author_email='',
     url='',
     license='GPL',
-    packages=find_packages(exclude=['ez_setup', ]),
-    namespace_packages=['mapclientplugins'],
+    packages=find_namespace_packages(exclude=['ez_setup', ]),
+    # namespace_packages=['mapclientplugins'],
     include_package_data=True,
     zip_safe=False,
     install_requires=package_dependencies,
